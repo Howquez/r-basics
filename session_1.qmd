@@ -1,0 +1,154 @@
+---
+title: "R Basics"
+author: "Jonas, Pietro & Hauke"
+format: 
+  revealjs: 
+    theme: [simple, custom.scss]
+    logo: img/logo.png
+    footer: "[Institute of Behavioral Science and Technology](https://www.ibt.unisg.ch/)"
+    preview-links: true
+---
+
+```{r packages}
+# install this package once, it'll then be used to install and load all remaining packages
+# install.packages("pacman")
+
+pacman::p_load(aRtsy)
+```
+
+```{r aRtwork}
+#| eval: false
+# see https://github.com/koenderks/aRtsy
+set.seed(42)
+artwork <- canvas_collatz(colors = colorPalette("neon2"),
+                          background = "#000000",
+                          n = 200,
+                          angle.odd = 0.33)
+saveCanvas(artwork, filename = "img/myArtwork.png")
+```
+
+# Welcome to Session 1
+
+## Outline
+
+In this session we will
+
+- make sure [R & RStudio](https://learnr-examples.shinyapps.io/ex-setup-r/) are up and running on all of your machines,
+- show why we like R,
+- introduce you to RStudio's User Interface,
+- demonstrate some basic concepts and data structures.
+
+## Getting started
+
+::: {layout-ncol=2}
+![QR to Survey](img/QR_survey.png)
+
+![QR to Setup](img/QR_setup.png)
+:::
+
+## Why we like R {.smaller}
+
+- Scripts vs. WYSIWYG (Excel)
+
+## Examples & Use Cases {.smaller}
+
+## R & RStudio {.smaller}
+
+> RStudio is an integrated development environment (IDE) for R. It helps the user effectively use R by making things easier [with features such as:]
+
+- Syntax highlighting,
+- Code completion,
+- Smart indentation,
+- Workspaces (more on that later), etc.
+
+
+## RStudio GUI {.smaller}
+
+Opening RStudio, you will see four window panes:
+
+- bottom left: The **Console** executes code. You can use it to test code that is not saved.
+- upper left: The **Script Interface** opens your scripts, markdown documents or notebooks. It is the one you'll use the most as it allows you to write and save both comments and code. You have to actively run the code, though.
+- upper right: The **Environment Pane** displays the objects (e.g. data, variables, custom functions) you can access in your current memory.
+- bottom right: This pane shows you many different, yet important, tabs. You can browse your directory, view plots, get help and see installed packages.
+
+::: footer
+See this [cheat sheet](https://github.com/Howquez/r-basics/blob/main/material/rstudio-ide.pdf)
+:::
+
+## RStudio GUI {background-image="https://bookdown.org/ndphillips/YaRrr/images/RStudio_Screenshot_Labels.png"}
+
+## Scripts, Markdown & Project {.smaller}
+
+- Scripts are a great way to document _how_ you analyzed your data.
+- Like a recipe, scripts it easy (for you and others) to reproduce your process exactly.
+- You can also use RMarkdown, which allows you to blend code chunks with text.^[Which is great for reports and quantitative master theses, for instance.]
+- To make your code even more organized and reproducible, use R Projects (We'll show an example).
+
+## Computational Empathy {.smaller}
+
+```{r eval = FALSE, echo = TRUE}
+#
+# Dear programmer:
+# When I wrote this code, only god and I knew how it worked.
+# Now, only god knows it!
+#
+# Therefore, if you are trying to optimize this routine
+# and it fails (most surely), please increase this counter
+# as a warning for the next person
+#
+# total_hours_wasted_here = 254
+#
+```
+
+source: [reddit](https://www.reddit.com/r/ProgrammerHumor/comments/8pdebc/only_god_and_i_knew/)
+
+# Los gehts
+
+## Algebra {.smaller}
+
+```{r echo = TRUE}
+2+2
+2 * 4
+2^8
+2 + (2 * 3) ^ 2
+(1 + 3) / 2 + 45
+```
+
+```{r echo = TRUE}
+a <- 2+2
+a + 2
+```
+
+## Data Types {.smaller}
+
+## Boolean Stuff {.smaller}
+```{r echo = TRUE}
+a == 4
+```
+
+
+## How to get Help? {.smaller}
+
+Assume you want to learn how to use the `mean()` function.
+
+- `?mean` or `help(mean)`
+- Use [stackoverflow](https://stackoverflow.com/questions/16801340/mean-in-r-by-using-mean)
+
+## Assign Values to Variables {.smaller}
+
+## Vectors {.smaller}
+
+## Exercise {.smaller}
+
+## Ressources {.smaller}
+
+swirl is a great start as it teaches you R interactively, at your own pace, and right in the R console! Run the following code to get started.
+
+```{r eval = FALSE, echo = TRUE}
+install.packages("swirl") # install this package once
+library(swirl)
+siwrl()
+```
+
+- [R for Data Science](http://r4ds.had.co.nz/)
+

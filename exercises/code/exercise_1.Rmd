@@ -1,0 +1,109 @@
+---
+title: "Exercise 1"
+output: html_document
+date: "`r Sys.Date()`"
+---
+
+# Hey there
+
+This is a RMarkdown document that allows you to write reports in many formats such as HTML, PDF or MS Word.
+In contrast to RScripts, you can write text (outside of comments). This, however, requires you to organize your code in so calles _code chunks_.
+
+While they show up in your source document (the `.Rmd` file), you cand hide them in the corresponding output format (such as the `.html` file).
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+If you want to, you can also show them using `echo = TRUE`.
+
+```{r packages, echo = TRUE}
+# install this package once, it'll then install and load all remaining packages
+# install.packages("pacman")
+
+pacman::p_load(magrittr, data.table, ggplot2)
+```
+
+```{r layout}
+layout <- theme(panel.background = element_rect(fill = "transparent", color = NA),
+                plot.background = element_rect(fill = "transparent", color = NA),
+                panel.grid = element_blank(),
+                panel.grid.major.y = element_blank(),
+                legend.key = element_rect(fill = "transparent"),
+                axis.line = element_line(size = 0.25),
+                axis.ticks = element_line(size = 0.25),
+                plot.caption = element_text(colour = "#555555"),
+                plot.margin = margin(0.25,1,0.25,0.25, "cm")
+)
+
+cPrimary = "#ffd353"
+cSecondary = "#9f2d55"
+colors <- c(cPrimary, cSecondary)
+```
+
+# Data
+
+In this document, we read some data from a public goods experiment that is stored in `../data/experiment.csv` and assign it to a variable we call `GMTV`.
+
+**Note:** Don't mind the interpretation of the data for the moment. We just want to showcase what you can do with it.
+
+```{r readData}
+GMTV <- read.csv(file = "../data/experiment.csv") %>% data.table()
+```
+
+## Gini coefficient
+
+Having the data, we can process it a little...
+
+```{r giniData, echo = TRUE}
+GINI <- GMTV[,
+             lapply(.SD, mean, na.rm = TRUE),
+             by = c("round", "student"),
+             .SDcols = "gini"]
+```
+
+...before we visualize it using the infamous `ggplot()` function.
+
+```{r giniPlot, echo = TRUE}
+ggplot(data = GINI, 
+       aes(x = round, y = gini, fill = student, color = student, lty = student)) +
+          layout +
+          theme(legend.position="bottom") +
+          geom_line(show.legend=FALSE) +
+          geom_point() +
+          scale_x_continuous(name="",  breaks = 1:10) +
+          scale_y_continuous(limits = c(0, 0.25), expand = c(0, 0)) +
+          labs(y = "Gini Coefficient") +
+          scale_color_manual(values = colors)
+```
+
+
+Apparently, we have some sort of time series data. The plot above shows the Gini coeeficient measuring inequality between two samples (stundent and non-students) over time.
+
+## Contributions over time
+
+We can create a similar plot and show a different variable easily. This time, we'll hide the corresponding code chunk.
+
+```{r contributionData}
+SHARE <- GMTV[,
+              lapply(.SD, mean, na.rm = TRUE),
+              by = c("round", "student"),
+              .SDcols = "share"]
+```
+```{r contributionPlot}
+ggplot(data = SHARE, 
+       aes(x = round, y = share, fill = student, color = student, lty = student)) +
+  layout +
+  theme(legend.position="bottom") +
+  geom_line(show.legend=FALSE) +
+  geom_point() +
+  scale_x_continuous(name="",  breaks = 1:15) +
+  scale_y_continuous(limits = c(0, 0.6), expand = c(0, 0)) +
+  labs(y = "Average Amount of Tokens Contributed") +
+  scale_color_manual(values = colors)
+```
+
+```{r removeObjects}
+rm(list = c("SHARE"))
+```
+

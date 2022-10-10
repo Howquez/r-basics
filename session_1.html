@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-<script src="Intro2R_files/libs/clipboard/clipboard.min.js"></script>
-<script src="Intro2R_files/libs/quarto-html/tabby.min.js"></script>
-<script src="Intro2R_files/libs/quarto-html/popper.min.js"></script>
-<script src="Intro2R_files/libs/quarto-html/tippy.umd.min.js"></script>
-<link href="Intro2R_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="Intro2R_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="Intro2R_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<script src="session_1_files/libs/clipboard/clipboard.min.js"></script>
+<script src="session_1_files/libs/quarto-html/tabby.min.js"></script>
+<script src="session_1_files/libs/quarto-html/popper.min.js"></script>
+<script src="session_1_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="session_1_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="session_1_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="session_1_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.1.132">
 
   <meta name="author" content="Jonas, Pietro &amp; Hauke">
-  <title>Intro 2 R</title>
+  <title>R Basics</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="Intro2R_files/libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="Intro2R_files/libs/revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="session_1_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="session_1_files/libs/revealjs/dist/reveal.css">
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -28,12 +28,76 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="Intro2R_files/libs/revealjs/dist/theme/quarto.css" id="theme">
-  <link href="Intro2R_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="Intro2R_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="Intro2R_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="Intro2R_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <link rel="stylesheet" href="session_1_files/libs/revealjs/dist/theme/quarto.css" id="theme">
+  <link href="session_1_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="session_1_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="session_1_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="session_1_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
 
   .callout {
@@ -324,13 +388,22 @@
     <div class="slides">
 
 <section id="title-slide" class="center">
-  <h1 class="title">Intro 2 R</h1>
+  <h1 class="title">R Basics</h1>
   <p class="author">Jonas, Pietro &amp; Hauke</p>
 </section>
 
+<section class="slide level2">
+
+<div class="cell">
+
+</div>
+<div class="cell">
+
+</div>
+</section>
 <section>
-<section id="session-1" class="title-slide slide level1 center">
-<h1>Session 1</h1>
+<section id="welcome-to-session-1" class="title-slide slide level1 center">
+<h1>Welcome to Session 1</h1>
 
 </section>
 <section id="outline" class="slide level2">
@@ -351,7 +424,7 @@
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="img/QR_survey.png"></p>
-<p></p><figcaption>Link to Survey</figcaption><p></p>
+<p></p><figcaption>QR to Survey</figcaption><p></p>
 </figure>
 </div>
 </div>
@@ -359,84 +432,176 @@
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="img/QR_setup.png"></p>
-<p></p><figcaption>Link to Setup</figcaption><p></p>
+<p></p><figcaption>QR to Setup</figcaption><p></p>
 </figure>
 </div>
 </div>
 </div>
 </div>
 </section>
-<section id="why-we-like-r" class="slide level2">
+<section id="why-we-like-r" class="slide level2 smaller">
 <h2>Why we like R</h2>
+<ul>
+<li>Scripts vs.&nbsp;WYSIWYG (Excel)</li>
+</ul>
+</section>
+<section id="examples-use-cases" class="slide level2 smaller">
+<h2>Examples &amp; Use Cases</h2>
+</section>
+<section id="r-rstudio" class="slide level2 smaller">
+<h2>R &amp; RStudio</h2>
 <blockquote>
-<p>R is unique in that it is not general-purpose. It does not compromise by trying to do a lot of things. It does a few things very well, mainly statistical analysis and data visualization. <a href="https://www.codecademy.com/resources/blog/what-is-r-used-for/">-codecademy</a></p>
+<p>RStudio is an integrated development environment (IDE) for R. It helps the user effectively use R by making things easier [with features such as:]</p>
 </blockquote>
-<p>Thanks to its built in function and additional packages, R is a great tool for:</p>
 <ul>
-<li><a href="">Analyses</a></li>
-<li><a href="http://estebanmoro.org/post/2020-10-19-personal-art-map-with-r/">Data Visualization</a></li>
-<li><a href="https://jnolis.com/blog/introducing_ggirl/">Post Cards</a></li>
+<li>Syntax highlighting,</li>
+<li>Code completion,</li>
+<li>Smart indentation,</li>
+<li>Workspaces (more on that later), etc.</li>
 </ul>
 </section>
-<section id="breakfast" class="slide level2">
-<h2>Breakfast</h2>
+<section id="rstudio-gui" class="slide level2 smaller">
+<h2>RStudio GUI</h2>
+<p>Opening RStudio, you will see four window panes:</p>
 <ul>
-<li>Eat eggs</li>
-<li>Drink coffee</li>
+<li>bottom left: The <strong>Console</strong> executes code. You can use it to test code that is not saved.</li>
+<li>upper left: The <strong>Script Interface</strong> opens your scripts, markdown documents or notebooks. It is the one you’ll use the most as it allows you to write and save both comments and code. You have to actively run the code, though.</li>
+<li>upper right: The <strong>Environment Pane</strong> displays the objects (e.g.&nbsp;data, variables, custom functions) you can access in your current memory.</li>
+<li>bottom right: This pane shows you many different, yet important, tabs. You can browse your directory, view plots, get help and see installed packages.</li>
 </ul>
+<div class="footer">
+<p>See this <a href="https://github.com/Howquez/r-basics/blob/main/material/rstudio-ide.pdf">cheat sheet</a></p>
+</div>
+</section>
+<section id="rstudio-gui-1" class="slide level2" data-background-image="https://bookdown.org/ndphillips/YaRrr/images/RStudio_Screenshot_Labels.png">
+<h2>RStudio GUI</h2>
+</section>
+<section id="scripts-markdown-project" class="slide level2 smaller">
+<h2>Scripts, Markdown &amp; Project</h2>
+<ul>
+<li>Scripts are a great way to document <em>how</em> you analyzed your data.</li>
+<li>Like a recipe, scripts it easy (for you and others) to reproduce your process exactly.</li>
+<li>You can also use RMarkdown, which allows you to blend code chunks with text.<sup>1</sup></li>
+<li>To make your code even more organized and reproducible, use R Projects (We’ll show an example).</li>
+</ul>
+<aside><ol class="aside-footnotes"><li id="fn1"><p>Which is great for reports and quantitative master theses, for instance.</p></li></ol></aside></section>
+<section id="computational-empathy" class="slide level2 smaller">
+<h2>Computational Empathy</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="co">#</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="co"># Dear programmer:</span></span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="co"># When I wrote this code, only god and I knew how it worked.</span></span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="co"># Now, only god knows it!</span></span>
+<span id="cb1-5"><a href="#cb1-5"></a><span class="co">#</span></span>
+<span id="cb1-6"><a href="#cb1-6"></a><span class="co"># Therefore, if you are trying to optimize this routine</span></span>
+<span id="cb1-7"><a href="#cb1-7"></a><span class="co"># and it fails (most surely), please increase this counter</span></span>
+<span id="cb1-8"><a href="#cb1-8"></a><span class="co"># as a warning for the next person</span></span>
+<span id="cb1-9"><a href="#cb1-9"></a><span class="co">#</span></span>
+<span id="cb1-10"><a href="#cb1-10"></a><span class="co"># total_hours_wasted_here = 254</span></span>
+<span id="cb1-11"><a href="#cb1-11"></a><span class="co">#</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>source: <a href="https://www.reddit.com/r/ProgrammerHumor/comments/8pdebc/only_god_and_i_knew/">reddit</a></p>
 </section></section>
 <section>
-<section id="session-2" class="title-slide slide level1 center">
-<h1>Session 2</h1>
+<section id="los-gehts" class="title-slide slide level1 center">
+<h1>Los gehts</h1>
 
 </section>
-<section id="dinner" class="slide level2">
-<h2>Dinner</h2>
+<section id="algebra" class="slide level2 smaller">
+<h2>Algebra</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="dv">2</span><span class="sc">+</span><span class="dv">2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 4</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="dv">2</span> <span class="sc">*</span> <span class="dv">4</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 8</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="dv">2</span><span class="sc">^</span><span class="dv">8</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 256</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="dv">2</span> <span class="sc">+</span> (<span class="dv">2</span> <span class="sc">*</span> <span class="dv">3</span>) <span class="sc">^</span> <span class="dv">2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 38</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a>(<span class="dv">1</span> <span class="sc">+</span> <span class="dv">3</span>) <span class="sc">/</span> <span class="dv">2</span> <span class="sc">+</span> <span class="dv">45</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 47</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a>a <span class="ot">&lt;-</span> <span class="dv">2</span><span class="sc">+</span><span class="dv">2</span></span>
+<span id="cb12-2"><a href="#cb12-2"></a>a <span class="sc">+</span> <span class="dv">2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 6</code></pre>
+</div>
+</div>
+</section>
+<section id="data-types" class="slide level2 smaller">
+<h2>Data Types</h2>
+</section>
+<section id="boolean-stuff" class="slide level2 smaller">
+<h2>Boolean Stuff</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a>a <span class="sc">==</span> <span class="dv">4</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
+</div>
+</div>
+</section>
+<section id="how-to-get-help" class="slide level2 smaller">
+<h2>How to get Help?</h2>
+<p>Assume you want to learn how to use the <code>mean()</code> function.</p>
 <ul>
-<li>Eat spaghetti</li>
-<li>Drink wine</li>
+<li><code>?mean</code> or <code>help(mean)</code></li>
+<li>Use <a href="https://stackoverflow.com/questions/16801340/mean-in-r-by-using-mean">stackoverflow</a></li>
 </ul>
 </section>
-<section id="going-to-sleep" class="slide level2">
-<h2>Going to sleep</h2>
-<ul>
-<li>Get in bed</li>
-<li>Count sheep</li>
-</ul>
-</section></section>
-<section>
-<section id="session-3" class="title-slide slide level1 center">
-<h1>Session 3</h1>
-
+<section id="assign-values-to-variables" class="slide level2 smaller">
+<h2>Assign Values to Variables</h2>
 </section>
-<section id="dinner-1" class="slide level2">
-<h2>Dinner</h2>
+<section id="vectors" class="slide level2 smaller">
+<h2>Vectors</h2>
+</section>
+<section id="exercise" class="slide level2 smaller">
+<h2>Exercise</h2>
+</section>
+<section id="ressources" class="slide level2 smaller">
+<h2>Ressources</h2>
+<p>swirl is a great start as it teaches you R interactively, at your own pace, and right in the R console! Run the following code to get started.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a><span class="fu">install.packages</span>(<span class="st">"swirl"</span>) <span class="co"># install this package once</span></span>
+<span id="cb16-2"><a href="#cb16-2"></a><span class="fu">library</span>(swirl)</span>
+<span id="cb16-3"><a href="#cb16-3"></a><span class="fu">siwrl</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <ul>
-<li>Eat spaghetti</li>
-<li>Drink wine</li>
+<li><a href="http://r4ds.had.co.nz/">R for Data Science</a></li>
 </ul>
 
 <img src="img/logo.png" class="slide-logo r-stretch"><div class="footer footer-default">
-<p>Institute of Behavioral Science and Technology</p>
+<p><a href="https://www.ibt.unisg.ch/">Institute of Behavioral Science and Technology</a></p>
 </div>
 </section></section>
+
     </div>
   </div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="Intro2R_files/libs/revealjs/dist/reveal.js"></script>
+  <script src="session_1_files/libs/revealjs/dist/reveal.js"></script>
   <!-- reveal.js plugins -->
-  <script src="Intro2R_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="Intro2R_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="Intro2R_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="Intro2R_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="Intro2R_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  <script src="session_1_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="session_1_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="session_1_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="session_1_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="session_1_files/libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
-  <script src="Intro2R_files/libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="Intro2R_files/libs/revealjs/plugin/search/search.js"></script>
-  <script src="Intro2R_files/libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="Intro2R_files/libs/revealjs/plugin/math/math.js"></script>
+  <script src="session_1_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="session_1_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="session_1_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="session_1_files/libs/revealjs/plugin/math/math.js"></script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
 
   <script>
@@ -631,6 +796,48 @@
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        function fireSlideChanged(previousSlide, currentSlide) {
+
+          // dispatch for htmlwidgets
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for reveal
+        if (window.Reveal) {
+          window.Reveal.addEventListener("slidechanged", function(event) {
+            fireSlideChanged(event.previousSlide, event.currentSlide);
+          });
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {
