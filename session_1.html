@@ -441,18 +441,27 @@
 </section>
 <section id="why-we-like-r" class="slide level2 smaller">
 <h2>Why we like R</h2>
+<p><strong>Scripts vs.&nbsp;WYSIWYG (Excel or SPSS)</strong></p>
+<p>Analyses conducted in R are transparent, easily shareable, and reproducible. This helps not only others to run and understand your code but also your future selves.</p>
+<p><strong>Open Source</strong></p>
+<p>R is 100% free of charge and as a result, has a huge support community. it means that a huge community of R programmers will constantly develop an distribute new R functionality. It also means that you find a lot of help online as others ran into the same problems as you do.</p>
+<p><strong>Versatility</strong></p>
+<p>Yes, R is not Python. You can still use it to do a lot of stuff. If you can imagine an analytical task, you can almost certainly implement (and automate) it in R.</p>
+<p><strong>RStudio</strong></p>
+<p>RStudio helps you write R code. You can easily and seamlessly organize and combine R code, analyses, plots, and written text into elegant documents all in one place.</p>
+</section>
+<section id="examples-use-cases" class="slide level2">
+<h2>Examples &amp; Use Cases</h2>
 <ul>
-<li>Scripts vs.&nbsp;WYSIWYG (Excel)</li>
+<li><a href="https://beta.rstudioconnect.com/jjallaire/htmlwidgets-highcharter/htmlwidgets-highcharter.html#sales-by-category">Dashboards</a></li>
+<li><a href="https://howquez.github.io/Are-there-hidden-Benefits-of-Monitoring/Predictions.html#the-self-interested-agents-expected-utility">Master Thesis</a> <a href="https://github.com/Howquez/coopUncertainty/blob/main/analysis/quarto/paper.pdf">&amp; Research Paper</a></li>
+<li><a href="http://rstudio-pubs-static.s3.amazonaws.com/334864_28050f7860dd4927a596872f0cd52401.html">Fraud Detection</a></li>
+<li><a href="https://github.com/Howquez/r-basics/blob/main/session_1.qmd">These Slides</a></li>
 </ul>
 </section>
-<section id="examples-use-cases" class="slide level2 smaller">
-<h2>Examples &amp; Use Cases</h2>
-</section>
-<section id="r-rstudio" class="slide level2 smaller">
+<section id="r-rstudio" class="slide level2">
 <h2>R &amp; RStudio</h2>
-<blockquote>
-<p>RStudio is an integrated development environment (IDE) for R. It helps the user effectively use R by making things easier [with features such as:]</p>
-</blockquote>
+<p>RStudio is an integrated development environment (IDE) for R. It helps the user effectively use R by making things easier with features such as:</p>
 <ul>
 <li>Syntax highlighting,</li>
 <li>Code completion,</li>
@@ -465,7 +474,7 @@
 <p>Opening RStudio, you will see four window panes:</p>
 <ul>
 <li>bottom left: The <strong>Console</strong> executes code. You can use it to test code that is not saved.</li>
-<li>upper left: The <strong>Script Interface</strong> opens your scripts, markdown documents or notebooks. It is the one you’ll use the most as it allows you to write and save both comments and code. You have to actively run the code, though.</li>
+<li>upper left: The <strong>Source</strong> opens your scripts, markdown documents or notebooks. It is the one you’ll use the most as it allows you to write and save both comments and code. You have to actively run the code, though.</li>
 <li>upper right: The <strong>Environment Pane</strong> displays the objects (e.g.&nbsp;data, variables, custom functions) you can access in your current memory.</li>
 <li>bottom right: This pane shows you many different, yet important, tabs. You can browse your directory, view plots, get help and see installed packages.</li>
 </ul>
@@ -473,20 +482,21 @@
 <p>See this <a href="https://github.com/Howquez/r-basics/blob/main/material/rstudio-ide.pdf">cheat sheet</a></p>
 </div>
 </section>
-<section id="rstudio-gui-1" class="slide level2" data-background-image="https://bookdown.org/ndphillips/YaRrr/images/RStudio_Screenshot_Labels.png">
-<h2>RStudio GUI</h2>
+<section id="section" class="slide level2" data-background-image="https://raw.githubusercontent.com/Howquez/r-basics/main/img/GUI.png">
+<h2></h2>
 </section>
 <section id="scripts-markdown-project" class="slide level2 smaller">
 <h2>Scripts, Markdown &amp; Project</h2>
 <ul>
 <li>Scripts are a great way to document <em>how</em> you analyzed your data.</li>
-<li>Like a recipe, scripts it easy (for you and others) to reproduce your process exactly.</li>
+<li>Like a recipe, scripts make it easy (for you and others) to reproduce your process <em>exactly</em>.</li>
 <li>You can also use RMarkdown, which allows you to blend code chunks with text.<sup>1</sup></li>
 <li>To make your code even more organized and reproducible, use R Projects (We’ll show an example).</li>
 </ul>
 <aside><ol class="aside-footnotes"><li id="fn1"><p>Which is great for reports and quantitative master theses, for instance.</p></li></ol></aside></section>
 <section id="computational-empathy" class="slide level2 smaller">
 <h2>Computational Empathy</h2>
+<p>Know your audience, i.e.&nbsp;yourself. And don’t be naive.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="co">#</span></span>
 <span id="cb1-2"><a href="#cb1-2"></a><span class="co"># Dear programmer:</span></span>
@@ -500,40 +510,79 @@
 <span id="cb1-10"><a href="#cb1-10"></a><span class="co"># total_hours_wasted_here = 254</span></span>
 <span id="cb1-11"><a href="#cb1-11"></a><span class="co">#</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<div class="footer">
 <p>source: <a href="https://www.reddit.com/r/ProgrammerHumor/comments/8pdebc/only_god_and_i_knew/">reddit</a></p>
+</div>
 </section></section>
 <section>
-<section id="los-gehts" class="title-slide slide level1 center">
-<h1>Los gehts</h1>
+<section id="vamos" class="title-slide slide level1 center">
+<h1>Vamos!</h1>
 
+</section>
+<section id="operators" class="slide level2">
+<h2>Operators</h2>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p>In the most simple form, R is an advanced calculator. Operators are symbols you know from any other program (Excel, etc.), such as <code>+</code> or <code>-</code>.</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Operation</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">x + y</td>
+<td style="text-align: left;">Addition</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">x - y</td>
+<td style="text-align: left;">Subtraction</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">x * y</td>
+<td style="text-align: left;">Multiplication</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">x / y</td>
+<td style="text-align: left;">Division</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">x ^ y</td>
+<td style="text-align: left;">Exponentiation</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">x %/% y</td>
+<td style="text-align: left;">Integer Division</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">x %% y</td>
+<td style="text-align: left;">Remainder</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
 </section>
 <section id="algebra" class="slide level2 smaller">
 <h2>Algebra</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="dv">2</span><span class="sc">+</span><span class="dv">2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 4</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="dv">2</span> <span class="sc">*</span> <span class="dv">4</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 8</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="dv">2</span><span class="sc">^</span><span class="dv">8</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 256</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="dv">2</span> <span class="sc">+</span> (<span class="dv">2</span> <span class="sc">*</span> <span class="dv">3</span>) <span class="sc">^</span> <span class="dv">2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 38</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a>(<span class="dv">1</span> <span class="sc">+</span> <span class="dv">3</span>) <span class="sc">/</span> <span class="dv">2</span> <span class="sc">+</span> <span class="dv">45</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 47</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="dv">2</span><span class="sc">+</span><span class="dv">2</span></span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="dv">2</span> <span class="sc">*</span> <span class="dv">4</span></span>
+<span id="cb2-3"><a href="#cb2-3"></a><span class="dv">2</span><span class="sc">^</span><span class="dv">4</span></span>
+<span id="cb2-4"><a href="#cb2-4"></a><span class="dv">2</span> <span class="sc">+</span> (<span class="dv">2</span> <span class="sc">*</span> <span class="dv">3</span>) <span class="sc">^</span> <span class="dv">2</span></span>
+<span id="cb2-5"><a href="#cb2-5"></a>(<span class="dv">1</span> <span class="sc">+</span> <span class="dv">3</span>) <span class="sc">/</span> <span class="dv">2</span> <span class="sc">+</span> <span class="dv">45</span></span>
+<span id="cb2-6"><a href="#cb2-6"></a><span class="dv">13</span> <span class="sc">%/%</span> <span class="dv">3</span></span>
+<span id="cb2-7"><a href="#cb2-7"></a><span class="dv">13</span> <span class="sc">%%</span> <span class="dv">5</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a>a <span class="ot">&lt;-</span> <span class="dv">2</span><span class="sc">+</span><span class="dv">2</span></span>
-<span id="cb12-2"><a href="#cb12-2"></a>a <span class="sc">+</span> <span class="dv">2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>a <span class="ot">&lt;-</span> <span class="dv">2</span><span class="sc">+</span><span class="dv">2</span></span>
+<span id="cb3-2"><a href="#cb3-2"></a>a <span class="sc">+</span> <span class="dv">2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 6</code></pre>
 </div>
@@ -544,11 +593,174 @@
 </section>
 <section id="boolean-stuff" class="slide level2 smaller">
 <h2>Boolean Stuff</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a>a <span class="sc">==</span> <span class="dv">4</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] TRUE</code></pre>
+<table>
+<colgroup>
+<col style="width: 11%">
+<col style="width: 23%">
+<col style="width: 64%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Operation</th>
+<th>Description</th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>x &lt; y</td>
+<td>Less than</td>
+<td>TRUE if x is smaller than y. FALSE otherwhise</td>
+</tr>
+<tr class="even">
+<td>x &lt;= y</td>
+<td>Less or equal than</td>
+<td>TRUE if x is smaller or equal than y. FALSE otherwhise</td>
+</tr>
+<tr class="odd">
+<td>x &gt; y</td>
+<td>Greater than</td>
+<td>TRUE if x is greater than y. FALSE otherwhise</td>
+</tr>
+<tr class="even">
+<td>x &gt;= y</td>
+<td>Greater or equal than</td>
+<td>TRUE if x is greater or equal than y. FALSE otherwhise</td>
+</tr>
+<tr class="odd">
+<td>x == y</td>
+<td>Exactly equal to</td>
+<td>TRUE if and only if x is equal to y. FALSE otherwhise</td>
+</tr>
+<tr class="even">
+<td>x != y</td>
+<td>Not equal to</td>
+<td>TRUE if and only if x is not equal to y. FALSE otherwhise</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>!x</td>
+<td>Negation</td>
+<td>TRUE if x is equal to FALSE or 0. FALSE otherwhise</td>
+</tr>
+<tr class="odd">
+<td>x | y</td>
+<td>OR</td>
+<td>TRUE if x or y or both are TRUE . FALSE otherwhise</td>
+</tr>
+<tr class="even">
+<td>x &amp; y</td>
+<td>AND</td>
+<td>TRUE if and only if x and y are both TRUE . FALSE otherwhise</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="boolean-stuff-1" class="slide level2">
+<h2>Boolean Stuff</h2>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="cell quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="dv">3</span> <span class="sc">&lt;</span> <span class="dv">4</span></span>
+<span id="cb5-2"><a href="#cb5-2"></a><span class="dv">3</span> <span class="sc">&gt;=</span> <span class="dv">4</span></span>
+<span id="cb5-3"><a href="#cb5-3"></a><span class="dv">3</span> <span class="sc">==</span> <span class="dv">4</span></span>
+<span id="cb5-4"><a href="#cb5-4"></a><span class="dv">3</span> <span class="sc">!=</span> <span class="dv">4</span></span>
+<span id="cb5-5"><a href="#cb5-5"></a></span>
+<span id="cb5-6"><a href="#cb5-6"></a><span class="sc">!</span><span class="cn">TRUE</span></span>
+<span id="cb5-7"><a href="#cb5-7"></a><span class="cn">TRUE</span> <span class="sc">|</span> <span class="cn">FALSE</span></span>
+<span id="cb5-8"><a href="#cb5-8"></a><span class="cn">TRUE</span> <span class="sc">&amp;</span> <span class="cn">FALSE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p>A Boolean expression is a logical statement that is either TRUE or FALSE.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="assign-values-to-variables" class="slide level2 smaller">
+<h2>Assign Values to Variables</h2>
+</section>
+<section id="naming-conventions" class="slide level2">
+<h2>Naming Conventions</h2>
+<ul>
+<li>Variable and function names should be lowercase.</li>
+<li>Use an underscore <code>_</code> to separate words within a name.</li>
+<li>Strive for names that are concise and meaningful (this is not easy!).</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="co"># Good</span></span>
+<span id="cb6-2"><a href="#cb6-2"></a>day_one</span>
+<span id="cb6-3"><a href="#cb6-3"></a>day_1</span>
+<span id="cb6-4"><a href="#cb6-4"></a></span>
+<span id="cb6-5"><a href="#cb6-5"></a><span class="co"># Bad</span></span>
+<span id="cb6-6"><a href="#cb6-6"></a>first_day_of_the_month</span>
+<span id="cb6-7"><a href="#cb6-7"></a>dayone</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="naming-conventions-1" class="slide level2">
+<h2>Naming Conventions</h2>
+<p>Where possible, avoid using names of existing functions and variables. Doing so will cause confusion for the readers of your code.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="co"># Bad</span></span>
+<span id="cb7-2"><a href="#cb7-2"></a>T <span class="ot">&lt;-</span> <span class="cn">FALSE</span></span>
+<span id="cb7-3"><a href="#cb7-3"></a>c <span class="ot">&lt;-</span> <span class="dv">10</span></span>
+<span id="cb7-4"><a href="#cb7-4"></a>mean <span class="ot">&lt;-</span> <span class="cf">function</span>(x) <span class="fu">sum</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Also, try to avoid special symbols such as <code>+</code>, for example. If you really need them, you can escape them using the back tick `</p>
+</section>
+<section id="naming-conventions-2" class="slide level2">
+<h2>Naming Conventions</h2>
+<p>Most importantly, be careful</p>
+</section>
+<section id="vectors" class="slide level2 smaller">
+<h2>Vectors</h2>
+</section>
+<section id="functions" class="slide level2">
+<h2>Functions</h2>
+</section>
+<section id="packages" class="slide level2">
+<h2>Packages</h2>
+<ul>
+<li><p>Packages are the fundamental units of reproducible R code. They include reusable R functions, the documentation that describes how to use them, and sample data.</p></li>
+<li><p>The comprehensive R Archive Network currently features <a href="https://cran.r-project.org/index.html">18.694 packages</a>.</p></li>
+<li><p>The majority of packages is quite niche-specific.</p></li>
+<li><p>To get started, we’ll show you how to install <a href="https://www.tidyverse.org/">Tidyverse</a>, an opinionated collection of R packages designed for data science. All packages share an underlying design philosophy, grammar, and data structures.</p></li>
+</ul>
+</section>
+<section id="section-1" class="slide level2" data-background-image="https://hbctraining.github.io/Intro-to-R/img/tidyverse_website.png" data-background-size="contain" data-background-repeat="no-repeat">
+<h2></h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="co">#</span></span>
+<span id="cb8-2"><a href="#cb8-2"></a><span class="co"># run this only once</span></span>
+<span id="cb8-3"><a href="#cb8-3"></a><span class="fu">install.packages</span>(<span class="st">"package_name"</span>)</span>
+<span id="cb8-4"><a href="#cb8-4"></a><span class="co">#</span></span>
+<span id="cb8-5"><a href="#cb8-5"></a><span class="co"># run this at the beginning of each session (if needed)</span></span>
+<span id="cb8-6"><a href="#cb8-6"></a><span class="fu">library</span>(package_name)</span>
+<span id="cb8-7"><a href="#cb8-7"></a><span class="co">#</span></span>
+<span id="cb8-8"><a href="#cb8-8"></a><span class="co">#</span></span>
+<span id="cb8-9"><a href="#cb8-9"></a><span class="co"># your turn: install tidyverse</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="footer">
+<p><a href="https://hbctraining.github.io/Intro-to-R/lessons/08_intro_tidyverse.html">Source</a></p>
+</div>
+</section>
+<section id="the-operator" class="slide level2" data-background-image="https://magrittr.tidyverse.org/logo.png" data-background-size="contain" data-background-repeat="no-repeat">
+<h2>The %&gt;% Operator</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a>a <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="cn">NA</span>)</span>
+<span id="cb9-2"><a href="#cb9-2"></a><span class="co">#</span></span>
+<span id="cb9-3"><a href="#cb9-3"></a><span class="fu">as.character</span>(<span class="fu">mean</span>(a, <span class="at">na.rm =</span> <span class="cn">TRUE</span>))</span>
+<span id="cb9-4"><a href="#cb9-4"></a><span class="co">#</span></span>
+<span id="cb9-5"><a href="#cb9-5"></a><span class="co"># We can do the same with the so called pipe operator %&gt;% </span></span>
+<span id="cb9-6"><a href="#cb9-6"></a><span class="co"># Stems from the mgrittr package and is included in the tidyverse</span></span>
+<span id="cb9-7"><a href="#cb9-7"></a><span class="co">#</span></span>
+<span id="cb9-8"><a href="#cb9-8"></a>a <span class="sc">%&gt;%</span> <span class="fu">mean</span>(<span class="at">na.rm =</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span> <span class="fu">as.character</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="footer">
+<p><a href="https://magrittr.tidyverse.org/">Source</a></p>
 </div>
 </section>
 <section id="how-to-get-help" class="slide level2 smaller">
@@ -559,26 +771,33 @@
 <li>Use <a href="https://stackoverflow.com/questions/16801340/mean-in-r-by-using-mean">stackoverflow</a></li>
 </ul>
 </section>
-<section id="assign-values-to-variables" class="slide level2 smaller">
-<h2>Assign Values to Variables</h2>
-</section>
-<section id="vectors" class="slide level2 smaller">
-<h2>Vectors</h2>
-</section>
+<section id="workspace-environment" class="slide level2">
+<h2>Workspace &amp; Environment</h2>
+
+<img data-src="img/workspace.png" class="r-stretch quarto-figure-center"><p class="caption">Don’t!</p></section>
 <section id="exercise" class="slide level2 smaller">
 <h2>Exercise</h2>
 </section>
-<section id="ressources" class="slide level2 smaller">
+<section id="ressources" class="slide level2">
 <h2>Ressources</h2>
 <p>swirl is a great start as it teaches you R interactively, at your own pace, and right in the R console! Run the following code to get started.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a><span class="fu">install.packages</span>(<span class="st">"swirl"</span>) <span class="co"># install this package once</span></span>
-<span id="cb16-2"><a href="#cb16-2"></a><span class="fu">library</span>(swirl)</span>
-<span id="cb16-3"><a href="#cb16-3"></a><span class="fu">siwrl</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="fu">install.packages</span>(<span class="st">"swirl"</span>) <span class="co"># install this package once</span></span>
+<span id="cb10-2"><a href="#cb10-2"></a><span class="fu">library</span>(swirl)</span>
+<span id="cb10-3"><a href="#cb10-3"></a><span class="fu">siwrl</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+</section>
+<section id="ressources-1" class="slide level2">
+<h2>Ressources</h2>
+<p>Resources we found helpful creating the slides:</p>
 <ul>
+<li><a href="https://bookdown.org/ndphillips/YaRrr/">YaRrrr</a></li>
+<li><a href="https://users.phhp.ufl.edu/rlp176/Courses/PHC6089/R_notes/index.html">Introduction to R by John Mushcelli and Andrew Jaffe</a></li>
 <li><a href="http://r4ds.had.co.nz/">R for Data Science</a></li>
 </ul>
+</section>
+<section id="bonus-rmarkdown" class="slide level2">
+<h2>Bonus: RMarkdown</h2>
 
 <img src="img/logo.png" class="slide-logo r-stretch"><div class="footer footer-default">
 <p><a href="https://www.ibt.unisg.ch/">Institute of Behavioral Science and Technology</a></p>
