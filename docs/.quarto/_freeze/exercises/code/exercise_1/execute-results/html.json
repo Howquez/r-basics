@@ -1,0 +1,16 @@
+{
+  "hash": "3203695457ce9b99ab648e720dd95873",
+  "result": {
+    "markdown": "---\ntitle: \"Exercise 1\"\noutput: html_document\ndate: \"2022-09-30\"\n---\n\n\n# Hey there\n\nThis is a RMarkdown document that allows you to write reports in many formats such as HTML, PDF or MS Word.\nIn contrast to RScripts, you can write text (outside of comments). This, however, requires you to organize your code in so calles _code chunks_.\n\nWhile they show up in your source document (the `.Rmd` file), you cand hide them in the corresponding output format (such as the `.html` file).\n\n\n\n\n\nIf you want to, you can also show them using `echo = TRUE`.\n\n\n::: {.cell}\n\n```{.r .cell-code}\n# install this package once, it'll then install and load all remaining packages\n# install.packages(\"pacman\")\n\npacman::p_load(magrittr, data.table, ggplot2)\n```\n:::\n\n::: {.cell}\n\n:::\n\n\n# Data\n\nIn this document, we read some data from a public goods experiment that is stored in `../data/experiment.csv` and assign it to a variable we call `GMTV`.\n\n**Note:** Don't mind the interpretation of the data for the moment. We just want to showcase what you can do with it.\n\n\n::: {.cell}\n\n:::\n\n\n## Gini coefficient\n\nHaving the data, we can process it a little...\n\n\n::: {.cell}\n\n```{.r .cell-code}\nGINI <- GMTV[,\n             lapply(.SD, mean, na.rm = TRUE),\n             by = c(\"round\", \"student\"),\n             .SDcols = \"gini\"]\n```\n:::\n\n\n...before we visualize it using the infamous `ggplot()` function.\n\n\n::: {.cell}\n\n```{.r .cell-code}\nggplot(data = GINI, \n       aes(x = round, y = gini, fill = student, color = student, lty = student)) +\n          layout +\n          theme(legend.position=\"bottom\") +\n          geom_line(show.legend=FALSE) +\n          geom_point() +\n          scale_x_continuous(name=\"\",  breaks = 1:10) +\n          scale_y_continuous(limits = c(0, 0.25), expand = c(0, 0)) +\n          labs(y = \"Gini Coefficient\") +\n          scale_color_manual(values = colors)\n```\n\n::: {.cell-output-display}\n![](exercise_1_files/figure-html/giniPlot-1.png){width=672}\n:::\n:::\n\n\n\nApparently, we have some sort of time series data. The plot above shows the Gini coeeficient measuring inequality between two samples (stundent and non-students) over time.\n\n## Contributions over time\n\nWe can create a similar plot and show a different variable easily. This time, we'll hide the corresponding code chunk.\n\n\n::: {.cell}\n\n:::\n\n::: {.cell}\n::: {.cell-output-display}\n![](exercise_1_files/figure-html/contributionPlot-1.png){width=672}\n:::\n:::\n\n::: {.cell}\n\n:::\n",
+    "supporting": [
+      "exercise_1_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
